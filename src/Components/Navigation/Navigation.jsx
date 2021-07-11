@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './navigation.scss';
 import Logo from '../../Assets/Vincent_Logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
