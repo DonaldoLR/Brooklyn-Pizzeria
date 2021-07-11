@@ -8,11 +8,11 @@ const Navigation = () => {
     setDisplayMobileMenu(!displayMobileMenu);
   };
   const toggleMenuStyle = {
-    display: displayMobileMenu ? 'flex' : 'none',
+    display: displayMobileMenu ? 'flex' : '',
   };
   return (
     <header>
-      <nav>
+      <nav className='container'>
         <button
           className={
             displayMobileMenu
@@ -26,12 +26,16 @@ const Navigation = () => {
             <span className='hamburger-inner'></span>
           </span>
         </button>
-        <div className='nav-logo'>
+        <img
+          className='nav-logo'
+          src={Logo}
+          alt='Logo'
+          width='120px'
+          height='67.5px'
+        />
+        {/* <div className='nav-logo'>
           <img src={Logo} alt='Logo' width='120px' height='67.5px' />
-        </div>
-        <div className='nav-cart'>
-          <FontAwesomeIcon icon='pizza-slice' size='2x' color='white' />
-        </div>
+        </div> */}
         <div className='nav-links' style={toggleMenuStyle}>
           <ul>
             <li className='nav-item'>Home</li>
@@ -39,6 +43,9 @@ const Navigation = () => {
             <li className='nav-item'>Order</li>
             <li className='nav-item'>Contact</li>
           </ul>
+        </div>
+        <div className='nav-cart'>
+          <FontAwesomeIcon icon='pizza-slice' size='2x' color='white' />
         </div>
       </nav>
     </header>

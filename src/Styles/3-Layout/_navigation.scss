@@ -8,8 +8,12 @@ nav {
   justify-items: center;
   padding: 30px 0;
   position: relative;
+  // max-width: 1000px;
+  margin: 0 auto;
 }
-.nav-hamburger {
+.nav-hamburger,
+.nav-logo,
+.nav-cart {
   z-index: 2;
 }
 .nav-links {
@@ -23,4 +27,34 @@ nav {
   align-items: center;
   text-align: center;
   display: none;
+  transition: all 3s ease-out;
+  ul {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+  nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .nav-hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    height: unset;
+    width: unset;
+    position: unset;
+    top: unset;
+    width: 100%;
+    ul {
+      height: unset;
+      flex-direction: unset;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
 }
